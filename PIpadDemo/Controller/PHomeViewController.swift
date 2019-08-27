@@ -8,10 +8,13 @@
 
 import UIKit
 
+import SnapKit
+
 class PHomeViewController: UIViewController {
     
     //左边doc栏
     var dockView:PDockView?
+    var selectedChildVC:UIViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +25,33 @@ class PHomeViewController: UIViewController {
         
         self.dockView = dockView
         
+        setupChildViewController()
+        
+        //注册通知
+        NotificationCenter.default.addObserver(self, selector: #selector(tabBarButtonDidChangeNotification(notification:)), name: NSNotification.Name("PTabBarButtonDidChangeNotification"), object: nil)
+        
+        changeChildVC(0)
         //保证首次加载屏幕正确
-//        self.viewWillTransition(to: UIScreen.main.bounds.size, with: self.transitionCoordinator!)
+//        self.viewWillTransition(to: UIScreen.main.bounds.size, with: self.transitionCoordinator)
+    }
+    
+    @objc func tabBarButtonDidChangeNotification(notification:NSNotification){
+        let index = notification.userInfo!["tabBarButtonIndex"] as! NSInteger
+        print("notification:",index)
+        
+        changeChildVC(index)
+    }
+    
+    func changeChildVC(_ index:NSInteger){
+        self.selectedChildVC?.view.removeFromSuperview()
+        let newVC = self.children[index]
+        self.view.addSubview(newVC.view)
+        self.selectedChildVC = newVC
+        
+        newVC.view.snp.makeConstraints { (make) in
+            make.top.right.bottom.equalTo(self.view)
+            make.left.equalTo(self.dockView!.right)
+        }
     }
     
     //屏幕旋转
@@ -36,7 +64,20 @@ class PHomeViewController: UIViewController {
             self.dockView?.width = 70
         }
         self.dockView?.height = size.height
+        self.selectedChildVC?.view.snp.updateConstraints({ (make) in
+            make.left.equalTo(self.dockView!.right)
+        })
     }
+    func setupChildViewController() {
+        //创建控制器
+        for i in 0...9{
+            print(i)
+            let controller = UIViewController()
+            controller.view.backgroundColor = UIColor(red:CGFloat(arc4random()%256)/255.0, green: CGFloat(arc4random()%256)/255.0, blue: CGFloat(arc4random()%256)/255.0, alpha: 1.0)
+            self.addChild(controller)
+        }
+    }
+    
 //    //ios8之前的屏幕旋转方法
 //    override func willRotate(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
 //
@@ -50,4 +91,8 @@ class PHomeViewController: UIViewController {
 //        }
 //    }
 
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
 }

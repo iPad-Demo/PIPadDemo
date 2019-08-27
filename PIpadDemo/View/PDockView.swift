@@ -17,8 +17,7 @@ class PDockView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.backgroundColor = UIColor(red:CGFloat(arc4random()%256)/255.0, green: CGFloat(arc4random()%256)/255.0, blue: CGFloat(arc4random()%256)/255.0, alpha: 1.0)
-        
+        self.backgroundColor = UIColor(red:55/255.0, green: 55/255.0, blue:55/255.0, alpha: 1.0)
         
         let profileView = PProfileButton()
         self.addSubview(profileView)

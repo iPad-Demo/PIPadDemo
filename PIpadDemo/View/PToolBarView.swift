@@ -14,9 +14,9 @@ class PToolBarView: UIView {
         super.init(frame: frame)
         
 //        self.backgroundColor = UIColor(red:CGFloat(arc4random()%256)/255.0, green: CGFloat(arc4random()%256)/255.0, blue: CGFloat(arc4random()%256)/255.0, alpha: 1.0)
-        setupButtonWithIcon(icon: "")
-        setupButtonWithIcon(icon: "")
-        setupButtonWithIcon(icon: "")
+        setupButtonWithIcon(icon: "tongxunlu")
+        setupButtonWithIcon(icon: "xinxi")
+        setupButtonWithIcon(icon: "xiangji")
     }
     
     private func setupButtonWithIcon(icon:String){
@@ -24,7 +24,6 @@ class PToolBarView: UIView {
         button.setImage(UIImage(named: icon), for: .normal)
         button.setBackgroundImage(UIImage(named: ""), for: .highlighted)
         self.addSubview(button)
-        button.backgroundColor = UIColor(red:CGFloat(arc4random()%256)/255.0, green: CGFloat(arc4random()%256)/255.0, blue: CGFloat(arc4random()%256)/255.0, alpha: 1.0)
     }
     
     override func layoutSubviews() {

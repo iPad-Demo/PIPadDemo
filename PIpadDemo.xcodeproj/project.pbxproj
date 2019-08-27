@@ -20,6 +20,8 @@
 		4C498E5D22F91C760071891A /* PProfileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C498E5C22F91C760071891A /* PProfileButton.swift */; };
 		4C498E5F22F92C4C0071891A /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C498E5E22F92C4C0071891A /* UIView+Extension.swift */; };
 		4C498E6422F96D040071891A /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C498E6322F96D040071891A /* Const.swift */; };
+		4CBB64C62314CA1800C4D04C /* PTabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB64C52314CA1800C4D04C /* PTabBarButton.swift */; };
+		A829D07E37DDCA116CE4ACB7 /* Pods_PIpadDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407290D11578B63ADACF3576 /* Pods_PIpadDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3428BC0FCB24C38B3B2CCE21 /* Pods-PIpadDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PIpadDemo.debug.xcconfig"; path = "Target Support Files/Pods-PIpadDemo/Pods-PIpadDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		407290D11578B63ADACF3576 /* Pods_PIpadDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PIpadDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C498E2322F913420071891A /* PIpadDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PIpadDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C498E2622F913420071891A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C498E2B22F913420071891A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -59,6 +63,8 @@
 		4C498E5C22F91C760071891A /* PProfileButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PProfileButton.swift; sourceTree = "<group>"; };
 		4C498E5E22F92C4C0071891A /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		4C498E6322F96D040071891A /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		4CBB64C52314CA1800C4D04C /* PTabBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTabBarButton.swift; sourceTree = "<group>"; };
+		D0EEEDED2C2948FCA5B0522B /* Pods-PIpadDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PIpadDemo.release.xcconfig"; path = "Target Support Files/Pods-PIpadDemo/Pods-PIpadDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A829D07E37DDCA116CE4ACB7 /* Pods_PIpadDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +93,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0FCBADEB0FB7AD3A27F13C66 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				407290D11578B63ADACF3576 /* Pods_PIpadDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4C498E1A22F913420071891A = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +108,8 @@
 				4C498E3A22F913460071891A /* PIpadDemoTests */,
 				4C498E4522F913460071891A /* PIpadDemoUITests */,
 				4C498E2422F913420071891A /* Products */,
+				CC133413E005885AAFAC6C10 /* Pods */,
+				0FCBADEB0FB7AD3A27F13C66 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				4C498E6222F965060071891A /* Extension */,
+				4CBB64C72314CED700C4D04C /* Button */,
 				4C498E6122F964E60071891A /* View */,
 				4C498E6022F964C80071891A /* Controller */,
 				4C498E2622F913420071891A /* AppDelegate.swift */,
@@ -154,7 +172,6 @@
 				4C498E5622F91C1C0071891A /* PDockView.swift */,
 				4C498E5822F91C3B0071891A /* PToolBarView.swift */,
 				4C498E5A22F91C530071891A /* PTabBarView.swift */,
-				4C498E5C22F91C760071891A /* PProfileButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -167,6 +184,25 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		4CBB64C72314CED700C4D04C /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				4C498E5C22F91C760071891A /* PProfileButton.swift */,
+				4CBB64C52314CA1800C4D04C /* PTabBarButton.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		CC133413E005885AAFAC6C10 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3428BC0FCB24C38B3B2CCE21 /* Pods-PIpadDemo.debug.xcconfig */,
+				D0EEEDED2C2948FCA5B0522B /* Pods-PIpadDemo.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -174,9 +210,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C498E4B22F913460071891A /* Build configuration list for PBXNativeTarget "PIpadDemo" */;
 			buildPhases = (
+				FF7BEDD9832D0DC95C8A24DE /* [CP] Check Pods Manifest.lock */,
 				4C498E1F22F913420071891A /* Sources */,
 				4C498E2022F913420071891A /* Frameworks */,
 				4C498E2122F913420071891A /* Resources */,
+				46805AAC5A9E34BDEA51E178 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -294,6 +332,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		46805AAC5A9E34BDEA51E178 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PIpadDemo/Pods-PIpadDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PIpadDemo/Pods-PIpadDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PIpadDemo/Pods-PIpadDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF7BEDD9832D0DC95C8A24DE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PIpadDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4C498E1F22F913420071891A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -302,6 +382,7 @@
 				4C498E5722F91C1C0071891A /* PDockView.swift in Sources */,
 				4C498E5F22F92C4C0071891A /* UIView+Extension.swift in Sources */,
 				4C498E5522F91A710071891A /* PHomeViewController.swift in Sources */,
+				4CBB64C62314CA1800C4D04C /* PTabBarButton.swift in Sources */,
 				4C498E2722F913420071891A /* AppDelegate.swift in Sources */,
 				4C498E5922F91C3B0071891A /* PToolBarView.swift in Sources */,
 				4C498E6422F96D040071891A /* Const.swift in Sources */,
@@ -479,6 +560,7 @@
 		};
 		4C498E4C22F913460071891A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3428BC0FCB24C38B3B2CCE21 /* Pods-PIpadDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -497,6 +579,7 @@
 		};
 		4C498E4D22F913460071891A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0EEEDED2C2948FCA5B0522B /* Pods-PIpadDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -1,0 +1,6 @@
+framework module Pods_PIpadDemo {
+  umbrella header "Pods-PIpadDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}
